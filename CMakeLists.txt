@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 project(BONES)
 
+include_directories(src)
+
 add_library(Bones
     src/Bones/Component.cpp
     src/Bones/Core.cpp
@@ -13,6 +15,8 @@ add_library(Bones
     src/Bones/Enviroment.h
     src/Bones/GameObject.h
     src/Bones/Keyboard.h
+	src/Bones/Bones.h
+
 )
 
 add_library(OpenGL
