@@ -1,11 +1,7 @@
 #include <iostream>
 #include <memory>
 
-#include "../Bones/Component.h"
-#include "../Bones/Core.h"
-#include "../Bones/GameObject.h"
-
-#include "../OpenGL/ShaderProgram.h"
+#include <Bones/Bones.h>
 
 int main()
 {

@@ -1,9 +1,3 @@
 #include "Component.h"
 
-class Component {
-
-private:
-
-public:
-
-};
+void Component::onDisplay() {}
