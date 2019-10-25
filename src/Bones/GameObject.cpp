@@ -1,10 +1,2 @@
+#include "GameObject.h"
 
-
-class GameObject {
-
-private:
-
-public:
-
-
-};

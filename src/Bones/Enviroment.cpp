@@ -1,15 +1,2 @@
-
-
-class Enviroment {
-
-private:
-
-public:
-
-
-};
-
-
-
-
+#include "Enviroment.h"
 
