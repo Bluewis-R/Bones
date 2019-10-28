@@ -1,7 +1,11 @@
 #include <vector>
 #include <memory>
 #include "Core.h"
+//#include "GameObject.h"
 
+Core::Core()
+{
+}
 
 std::shared_ptr<Core> Core::initialise()
 {
@@ -11,11 +15,20 @@ std::shared_ptr<Core> Core::initialise()
 
 void Core::start()
 {
-  while (true)
-  {
-    for (size_t i = 0; i < m_GameObjects.size(); i++)
-    {
-      m_GameObjects.at(i)->display();
-    }
-  }
+}
+
+void Core::stop()
+{
+}
+
+std::shared_ptr<GameObject> Core::addGameObject()
+{
+  std::shared_ptr<GameObject> rtn = std::make_shared<GameObject>();
+  m_GameObjects.push_back(rtn);
+  return rtn;
+}
+
+void Core::update()
+{
+
 }

@@ -2,14 +2,14 @@
 #include <memory>
 
 #include <Bones/Bones.h>
+//#include "Core.h"
 
 int main()
 {
 
   std::shared_ptr<Core> core = std::make_shared<Core>();
-  //core->start()
   std::shared_ptr<GameObject> triangle = core->addGameObject();
-
+  
 
 
 

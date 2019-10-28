@@ -1,4 +1,7 @@
+#pragma once
+#include <vector>
 #include "Enviroment.h"
+
 #include "GameObject.h"
 
 class NonCopyable
@@ -20,10 +23,13 @@ private:
   //bool m_running;
 
 public:
+  Core();
   static std::shared_ptr<Core> initialise();
   void start();
   void stop();
+  void update();
   std::shared_ptr<GameObject> addGameObject();
-
+  //std::shared_ptr<GameObject> addGameObject();
+  
 };
 
