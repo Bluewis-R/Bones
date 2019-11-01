@@ -15,9 +15,16 @@ private:
 
 public:
   //std::shared_ptr<Core> getCore();      // this error hurts me emotionaly
-  template <typename T>
-  std::shared_ptr<T> addComponents();
+	void display();
 
-  void display();
+
+
+  template <typename T>
+  std::shared_ptr<T> addComponents()
+  {
+	  std::shared_ptr<T> rtn = std::make_shared<T>();
+	  components.push_back(rtn);
+	  return rtn;
+  }
 };
 

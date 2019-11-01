@@ -30,5 +30,8 @@ std::shared_ptr<GameObject> Core::addGameObject()
 
 void Core::update()
 {
-
+	for (size_t i = 0; i < m_GameObjects.size(); i++)
+	{
+		m_GameObjects.at(i)->display();
+	}
 }

@@ -28,3 +28,7 @@ void Component::onBegin()
 void Component::onTick()
 {
 }
+
+void Component::onDisplay()
+{
+}

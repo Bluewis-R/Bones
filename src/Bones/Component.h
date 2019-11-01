@@ -23,7 +23,7 @@ public:
   void onBegin();
   void onTick();
 
-  
+  virtual void onDisplay();
   
   
   
