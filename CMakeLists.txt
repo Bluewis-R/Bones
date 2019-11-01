@@ -35,6 +35,10 @@ add_library(OpenGL
     src/OpenGL/simple.frag
     src/OpenGL/simple.vert
 
+    src/OpenGL/triRenderer.cpp
+    src/OpenGL/triRenderer.h
+
+
 )
 target_link_libraries(Bones OpenGL SDL2 opengl32 glew32)
 
