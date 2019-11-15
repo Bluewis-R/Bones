@@ -1,7 +1,9 @@
 #pragma once
+#ifndef _CORE_H_
+#define _CORE_H_
+
 #include <vector>
 #include "Enviroment.h"
-
 #include "GameObject.h"
 
 class NonCopyable
@@ -15,21 +17,24 @@ private:
 };
 
 class Core : private NonCopyable{
-
-private:
-  std::shared_ptr<Enviroment> m_enviroment;
-  std::vector<std::shared_ptr<GameObject>> m_GameObjects;
-  //std::shared_ptr<Keyboard> m_Keyboard;
-  //bool m_running;
-
 public:
   Core();
   static std::shared_ptr<Core> initialise();
+  std::shared_ptr<GameObject> addGameObject();
+
   void start();
   void stop();
-  void update();
-  std::shared_ptr<GameObject> addGameObject();
-  //std::shared_ptr<GameObject> addGameObject();
-  
-};
+  void update();  //  run() in labs...
 
+  //std::shared_ptr<GameObject> addGameObject();
+
+private:
+  std::weak_ptr<Core> self;
+  std::vector<std::shared_ptr<GameObject>> m_GameObjects;
+
+  //std::shared_ptr<Keyboard> m_Keyboard;
+  //std::shared_ptr<Enviroment> m_enviroment;
+  bool m_running;
+
+};
+#endif

@@ -1,9 +1,12 @@
 #pragma once
-class Enviroment {
+#ifndef _ENVIROMENT_H_
+#define _ENVIROMENT_H_
 
-private:
-  float deltaTime;
+class Enviroment {
 public:
   float getDeltaTime();
+private:
+  float deltaTime;
 
 };
+#endif

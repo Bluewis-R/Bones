@@ -9,13 +9,15 @@
 
 class Texture
 {
+public:
+  Texture(std::string path);
+  glm::vec2 getSize();
+  GLuint getId();
+
+private:
 	GLuint id;
 	glm::vec2 size;
 
-public:
-	Texture(std::string path);
-	glm::vec2 getSize();
-	GLuint getId();
 
 };
 #endif

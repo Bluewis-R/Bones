@@ -3,14 +3,16 @@
 #include "Core.h"
 //#include "GameObject.h"
 
+
 Core::Core()
 {
 }
 
 std::shared_ptr<Core> Core::initialise()
 {
-  std::shared_ptr<Core> c = std::make_shared<Core>();
-  return c;
+  std::shared_ptr<Core> rtn = std::make_shared<Core>();
+  rtn->self = rtn;
+  return rtn;
 }
 
 void Core::start()
@@ -25,13 +27,24 @@ std::shared_ptr<GameObject> Core::addGameObject()
 {
   std::shared_ptr<GameObject> rtn = std::make_shared<GameObject>();
   m_GameObjects.push_back(rtn);
+  rtn->
+
   return rtn;
 }
 
 void Core::update()
 {
-	for (size_t i = 0; i < m_GameObjects.size(); i++)
-	{
-		m_GameObjects.at(i)->display();
-	}
+  while (m_running)
+  {
+    //ticks
+    for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_GameObjects.begin();
+      it != m_GameObjects.end(); it++)
+    {      (*it)->tick();
+    }
+    //displays
+    for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_GameObjects.begin();
+      it != m_GameObjects.end(); it++)
+    {      (*it)->display();
+    }
+  }
 }

@@ -1,27 +1,14 @@
 #include "Component.h"
+//#include "Core.h"
 
 //void Component::onDisplay() {}
 
-std::shared_ptr<Core> Component::getCore()
+std::shared_ptr<GameObject> Component::getGameObject()
 {
-  return std::shared_ptr<Core>();
+  return m_gameObject.lock();
 }
 
-std::shared_ptr<Keyboard> Component::getKeyBoard()
-{
-  return std::shared_ptr<Keyboard>();
-}
-
-std::shared_ptr<Enviroment> Component::getEnviroment()
-{
-  return std::shared_ptr<Enviroment>();
-}
-
-void Component::onInit()
-{
-}
-
-void Component::onBegin()
+void Component::onInitialise()
 {
 }
 
