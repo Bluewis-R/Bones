@@ -26,7 +26,6 @@ public:
   void stop();
   void update();  //  run() in labs...
 
-  //std::shared_ptr<GameObject> addGameObject();
 
 private:
   std::weak_ptr<Core> self;

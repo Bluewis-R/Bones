@@ -6,6 +6,7 @@
 #include "Core.h"
 #include "GameObject.h"
 #include "Component.h"
+#include "triRenderer.h"
 
 
 

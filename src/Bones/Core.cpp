@@ -27,7 +27,7 @@ std::shared_ptr<GameObject> Core::addGameObject()
 {
   std::shared_ptr<GameObject> rtn = std::make_shared<GameObject>();
   m_GameObjects.push_back(rtn);
-  rtn->
+  //rtn->gameObject = self;
 
   return rtn;
 }
@@ -39,12 +39,14 @@ void Core::update()
     //ticks
     for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_GameObjects.begin();
       it != m_GameObjects.end(); it++)
-    {      (*it)->tick();
+    {
+      (*it)->tick();
     }
     //displays
     for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_GameObjects.begin();
       it != m_GameObjects.end(); it++)
-    {      (*it)->display();
+    {
+      (*it)->display();
     }
   }
 }

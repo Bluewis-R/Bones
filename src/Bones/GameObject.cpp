@@ -20,7 +20,6 @@ void GameObject::display()
   {
     (*it)->onDisplay();
   }
-
   /*
   for (size_t i = 0; i < components.size(); i++)
   {
@@ -28,5 +27,8 @@ void GameObject::display()
   }
   */
 }
-std::shared_ptr<Core> GameObject::getCore(){
-  return m_core.lock();}
+
+std::shared_ptr<Core> GameObject::getCore()
+{
+  return m_core.lock();
+}
