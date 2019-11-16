@@ -1,12 +1,19 @@
 #pragma once
 #ifndef _KEYBOARD_H_
 #define _KEYBOARD_H_
+#include <vector>
 
-#endif // !_KEYBOARD_H_
 
 class Keyboard
 {
 public:
-private:
+  void GetKey();
+  void GetKeyDown();
+  void GetKeyUp();
 
+
+
+private:
+  std::vector<int> m_keyCodes;
 };
+#endif // !_KEYBOARD_H_

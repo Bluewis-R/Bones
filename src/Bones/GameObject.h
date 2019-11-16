@@ -4,9 +4,6 @@
 
 #include <vector>
 #include <memory>
-//#include "Component.h"
-
-//#include "Core.h"
 
 class Component;
 class Core;
@@ -15,12 +12,12 @@ class GameObject
 {
 public:
   //std::shared_ptr<Core> getCore();      // this error hurts me emotionaly
-  void tick();
-  void display();
-  std::shared_ptr<Core> getCore();
+  void Tick();
+  void Display();
+  std::shared_ptr<Core> GetCore();
 
   template <typename T>
-  std::shared_ptr<T> addComponents()
+  std::shared_ptr<T> AddComponents()
   {
     std::shared_ptr<T> rtn = std::make_shared<T>();
     m_components.push_back(rtn);
@@ -28,7 +25,7 @@ public:
     return rtn;
   }
   template <typename T, typename A>
-  std::shared_ptr<T> addComponents(A a)
+  std::shared_ptr<T> AddComponents(A a)
   {
     std::shared_ptr<T> rtn = std::make_shared<T>();
     m_components.push_back(rtn);

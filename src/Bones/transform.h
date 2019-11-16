@@ -9,17 +9,21 @@
 class Transform : public Component
 {
 public:
-  void setPosition(glm::vec3 _position);
-  void setRotation(glm::vec3 _rotation);
-  void setScale(glm::vec3 _scale);
-  glm::vec3 getPosition();
-  glm::vec3 getRotation();
-  glm::vec3 getScale();
+  void SetPosition(glm::vec3 _position);
+  void SetRotation(glm::vec3 _rotation);
+  void SetScale(glm::vec3 _scale);
+  glm::vec3 GetPosition();
+  glm::vec3 GetRotation();
+  glm::vec3 GetScale();
+  glm::mat4 GetModel();
+
 
 private:
   glm::vec3 m_position;
   glm::vec3 m_rotation;
   glm::vec3 m_scale;
+  glm::mat4 m_model;
+
 
 };
 

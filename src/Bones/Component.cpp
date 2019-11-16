@@ -3,19 +3,19 @@
 
 //void Component::onDisplay() {}
 
-std::shared_ptr<GameObject> Component::getGameObject()
+std::shared_ptr<GameObject> Component::GetGameObject()
 {
   return m_gameObject.lock();
 }
 
-void Component::onInitialise()
+void Component::OnInitialise()
 {
 }
 
-void Component::onTick()
+void Component::OnTick()
 {
 }
 
-void Component::onDisplay()
+void Component::OnDisplay()
 {
 }

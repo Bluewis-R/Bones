@@ -4,25 +4,40 @@ project(BONES)
 include_directories(src)
 
 add_library(Bones
-    src/Bones/Component.cpp
-    src/Bones/Core.cpp
-    src/Bones/Enviroment.cpp
-    src/Bones/GameObject.cpp
-    src/Bones/Keyboard.cpp
-    src/Bones/triRenderer.cpp
-    src/Bones/transform.cpp
-    src/Bones/Camera.cpp
+    src/Bones/Bones.h
+    src/Bones/Macros.h
 
     src/Bones/Component.h
     src/Bones/Core.h
     src/Bones/Enviroment.h
     src/Bones/GameObject.h
     src/Bones/Keyboard.h
-    src/Bones/triRenderer.h
-    src/Bones/transform.h
+    src/Bones/MeshRenderer.h
+    src/Bones/Transform.h
     src/Bones/Camera.h
-    
-    src/Bones/Bones.h
+    src/Bones/Resource.h
+    src/Bones/Mesh.h
+    src/Bones/Texture.h
+    src/Bones/Shader.h
+    src/Bones/Material.h
+    src/Bones/MaterialAttribute.h
+
+    src/Bones/Component.cpp
+    src/Bones/Core.cpp
+    src/Bones/Enviroment.cpp
+    src/Bones/GameObject.cpp
+    src/Bones/Keyboard.cpp
+    src/Bones/MeshRenderer.cpp
+    src/Bones/Transform.cpp
+    src/Bones/Camera.cpp
+    src/Bones/Resource.cpp
+    src/Bones/Mesh.cpp
+    src/Bones/Texture.cpp
+    src/Bones/Shader.cpp
+    src/Bones/Material.cpp
+    src/Bones/MaterialAttribute.cpp
+
+
 )
 
 add_library(rend

@@ -1,10 +1,7 @@
 #include "Keyboard.h"
 
-class KeyBoard {
-
-private:
-
-public:
+void Keyboard::GetKey()
+{
 
 
-};
+}

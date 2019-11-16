@@ -4,9 +4,9 @@
 
 class Enviroment {
 public:
-  float getDeltaTime();
+  float GetDeltaTime();
 private:
-  float deltaTime;
+  float m_deltaTime;
 
 };
 #endif

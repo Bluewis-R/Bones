@@ -6,23 +6,23 @@
 
 //#include "GameObject.h"
 //#include "Core.h"
-#include "Enviroment.h"
-#include "Keyboard.h"
+//#include "Enviroment.h"
+//#include "Keyboard.h"
 
 class GameObject;
 class Core;
 class Component 
 {
 public:
-  virtual void onInitialise();
-  virtual void onTick();
-  virtual void onDisplay();
+  virtual void OnInitialise();
+  virtual void OnTick();
+  virtual void OnDisplay();
   //virtual void onPostDisplay();
   //virtual void onGui();
 
 
   //std::shared_ptr<Core> getCore();
-  std::shared_ptr<GameObject> getGameObject();
+  std::shared_ptr<GameObject> GetGameObject();
   //std::shared_ptr<Keyboard> getKeyBoard();
   //std::shared_ptr<Enviroment> getEnviroment();
 

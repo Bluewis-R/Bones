@@ -2,32 +2,33 @@
 //#include <glm/glm.hpp>
 
 
-void Transform::setPosition(glm::vec3 _position)
+void Transform::SetPosition(glm::vec3 _position)
 {
   m_position = _position;
 }
-
-void Transform::setRotation(glm::vec3 _rotation)
+void Transform::SetRotation(glm::vec3 _rotation)
 {
   m_rotation = _rotation;
 }
-
-void Transform::setScale(glm::vec3 _scale)
+void Transform::SetScale(glm::vec3 _scale)
 {
   m_scale = _scale;
 }
-
-glm::vec3 Transform::getPosition()
+glm::vec3 Transform::GetPosition()
 {
   return m_position;
 }
-
-glm::vec3 Transform::getRotation()
+glm::vec3 Transform::GetRotation()
 {
   return m_rotation;
 }
-
-glm::vec3 Transform::getScale()
+glm::vec3 Transform::GetScale()
 {
   return m_scale;
 }
+
+glm::mat4 Transform::GetModel()
+{
+  return m_model;
+}
+

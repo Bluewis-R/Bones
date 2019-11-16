@@ -1,6 +1,7 @@
 #include <vector>
-#include <memory>
+//#include <memory>
 #include "Core.h"
+
 //#include "GameObject.h"
 
 
@@ -8,45 +9,45 @@ Core::Core()
 {
 }
 
-std::shared_ptr<Core> Core::initialise()
+std::shared_ptr<Core> Core::Initialise()
 {
   std::shared_ptr<Core> rtn = std::make_shared<Core>();
   rtn->self = rtn;
   return rtn;
 }
 
-void Core::start()
+void Core::Start()
 {
 }
 
-void Core::stop()
+void Core::Stop()
 {
 }
 
-std::shared_ptr<GameObject> Core::addGameObject()
+std::shared_ptr<GameObject> Core::AddGameObject()
 {
   std::shared_ptr<GameObject> rtn = std::make_shared<GameObject>();
-  m_GameObjects.push_back(rtn);
+  m_gameObjects.push_back(rtn);
   //rtn->gameObject = self;
 
   return rtn;
 }
 
-void Core::update()
+void Core::Update()
 {
   while (m_running)
   {
     //ticks
-    for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_GameObjects.begin();
-      it != m_GameObjects.end(); it++)
+    for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_gameObjects.begin();
+      it != m_gameObjects.end(); it++)
     {
-      (*it)->tick();
+      (*it)->Tick();
     }
     //displays
-    for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_GameObjects.begin();
-      it != m_GameObjects.end(); it++)
+    for (std::vector<std::shared_ptr<GameObject>>::iterator it = m_gameObjects.begin();
+      it != m_gameObjects.end(); it++)
     {
-      (*it)->display();
+      (*it)->Display();
     }
   }
 }

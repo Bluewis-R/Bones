@@ -9,14 +9,16 @@
 int main()
 {
 
-  std::shared_ptr<Core> core = Core::initialise();
-  std::shared_ptr<GameObject> entity = core->addGameObject();
-  std::shared_ptr<triRenderer> trig = entity->addComponents<triRenderer>();
+  std::shared_ptr<Core> core = Core::Initialise();
+  std::shared_ptr<GameObject> triangle = core->AddGameObject();
+  std::shared_ptr<MeshRenderer> mr = triangle->AddComponents<MeshRenderer>();
 
+  //std::shared_ptr<Mesh> mesh = core->load<Material>("shaders/simple");
+  
 
   
 
-  core->start();
+  core->Start();
 
 
   /*

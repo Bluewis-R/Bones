@@ -4,21 +4,21 @@
 #include "Component.h"
 
 
-void GameObject::tick()
+void GameObject::Tick()
 {
   for (std::vector<std::shared_ptr<Component>>::iterator it = m_components.begin();
     it != m_components.end(); it++)
   {
-    (*it)->onTick();
+    (*it)->OnTick();
   }
 }
 
-void GameObject::display()
+void GameObject::Display()
 {
   for (std::vector<std::shared_ptr<Component>>::iterator it = m_components.begin();
     it != m_components.end(); it++)
   {
-    (*it)->onDisplay();
+    (*it)->OnDisplay();
   }
   /*
   for (size_t i = 0; i < components.size(); i++)
@@ -28,7 +28,7 @@ void GameObject::display()
   */
 }
 
-std::shared_ptr<Core> GameObject::getCore()
+std::shared_ptr<Core> GameObject::GetCore()
 {
   return m_core.lock();
 }
