@@ -15,5 +15,5 @@ void MeshRenderer::OnDisplay()
 
 void MeshRenderer::Draw()
 {
-
+  //m_mesh->
 }

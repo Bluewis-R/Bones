@@ -5,8 +5,7 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 #include "Component.h"
-#include "Mesh.h"
-
+#include "rend/Mesh.h"
 
 class MeshRenderer : public Component
 {
@@ -14,11 +13,11 @@ public:
   MeshRenderer();
   void OnDisplay();
   void Draw();
-  void SetMesh(std::shared_ptr<Mesh> _mesh);
+  //void SetMesh(std::shared_ptr<Mesh> _mesh);
 
-
+  //Mesh
 private:
-  Mesh m_mesh;
+  //std::shared_ptr<Mesh> m_mesh;
 
 };
 

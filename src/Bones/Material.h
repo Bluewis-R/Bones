@@ -2,7 +2,9 @@
 #ifndef _MATERIAL_H_
 #define _MATERIAL_H_
 #include <vector>
-#include "Shader.h"
+//#include "Shader.h"
+#include "rend/Shader.h"
+
 #include "MaterialAttribute.h"
 
 class Material
