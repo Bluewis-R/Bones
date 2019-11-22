@@ -16,7 +16,8 @@ private:
   NonCopyable& operator=(const NonCopyable &);
 };
 
-class Core : private NonCopyable{
+class Core : private NonCopyable
+{
 public:
   Core();
   static std::shared_ptr<Core> Initialise();

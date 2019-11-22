@@ -10,6 +10,7 @@ class Core;
 
 class GameObject 
 {
+  friend class Core;
 public:
   //std::shared_ptr<Core> getCore();      // this error hurts me emotionaly
   void Tick();
@@ -21,7 +22,7 @@ public:
   {
     std::shared_ptr<T> rtn = std::make_shared<T>();
     m_components.push_back(rtn);
-    // rtn->onInitialize();
+    rtn->OnInitialise();
     return rtn;
   }
   template <typename T, typename A>
@@ -29,13 +30,14 @@ public:
   {
     std::shared_ptr<T> rtn = std::make_shared<T>();
     m_components.push_back(rtn);
-    rtn->onInitialise(A a);    return rtn;
+    rtn->OnInitialise(A a);    return rtn;
   }
 
 
 
 
 private:
+  std::weak_ptr<GameObject> self;
   std::vector<std::shared_ptr<Component>> m_components;
   std::weak_ptr<Core> m_core;
 

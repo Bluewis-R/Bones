@@ -28,7 +28,7 @@ std::shared_ptr<GameObject> Core::AddGameObject()
 {
   std::shared_ptr<GameObject> rtn = std::make_shared<GameObject>();
   m_gameObjects.push_back(rtn);
-  //rtn->gameObject = self;
+  rtn->self = rtn;
 
   return rtn;
 }

@@ -18,7 +18,7 @@ add_library(Bones
     src/Bones/Resource.h
     #src/Bones/Mesh.h
     #src/Bones/Texture.h
-	#src/Bones/Shader.h
+    #src/Bones/Shader.h
     src/Bones/Material.h
     src/Bones/MaterialAttribute.h
 
@@ -33,7 +33,6 @@ add_library(Bones
     src/Bones/Resource.cpp
     #src/Bones/Mesh.cpp
     #src/Bones/Texture.cpp
-    #src/Bones/Shader.cpp
     #src/Bones/Shader.cpp
     src/Bones/Material.cpp
     src/Bones/MaterialAttribute.cpp
@@ -53,7 +52,7 @@ add_library(rend
 
   src/rend/Mesh.h
   src/rend/Shader.h
-  src/rend/Mesh.h
+  src/rend/Texture.h
 )
 
 add_executable(game

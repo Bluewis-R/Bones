@@ -2,7 +2,7 @@
 #ifndef _MATERIALATTRIBUTE_H_
 #define _MATERIALATTRIBUTE_H_
 #include <string>
-#include "Texture.h"
+#include "rend/Texture.h"
 
 class MaterialAttribute
 {
@@ -12,7 +12,7 @@ private:
   std::string m_name;
   int m_type;
   float m_floatValue;
-  std::weak_ptr<Texture> textureValue;
+  std::weak_ptr<rend::Texture> textureValue;
 };
 
 #endif // !_MATERIALATTRIBUTE_H_

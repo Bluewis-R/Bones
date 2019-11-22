@@ -5,7 +5,11 @@
 
 MeshRenderer::MeshRenderer()
 {
-  
+
+}
+
+void MeshRenderer::OnInitialise()
+{
 }
 
 void MeshRenderer::OnDisplay()
@@ -13,7 +17,4 @@ void MeshRenderer::OnDisplay()
   std::cout << "Render::onDisplay" << std::endl;
 }
 
-void MeshRenderer::Draw()
-{
-  //m_mesh->
-}
+
