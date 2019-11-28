@@ -11,6 +11,8 @@
 
 #include <string>
 
+#include "Bones/Resource.h"
+
 namespace rend
 {
 
@@ -21,7 +23,7 @@ struct RenderTexture;
 struct TextureAdapter;
 struct Mesh;
 
-struct Shader : public std::sr1::noncopyable
+struct Shader : public Resource
 {
   ~Shader();
 

@@ -5,16 +5,18 @@
 #include <GL/glew.h>
 
 #include <sr1/memory>
-#include <sr1/noncopyable>
+//#include <sr1/noncopyable>
 #include <sr1/zero_initialized>
 #include <sr1/vector>
+
+#include "Bones/Resource.h"
 
 namespace rend
 {
 
 struct Context;
 
-struct Texture : public TextureAdapter, public std::sr1::noncopyable
+struct Texture : public TextureAdapter, public Resource
 {
   ~Texture();
 

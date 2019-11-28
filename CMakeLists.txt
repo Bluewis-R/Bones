@@ -6,6 +6,8 @@ include_directories(src)
 add_library(Bones
     src/Bones/Bones.h
     src/Bones/Macros.h
+	src/Bones/stb_vorbis.c
+
 
     src/Bones/Component.h
     src/Bones/Core.h
@@ -16,6 +18,7 @@ add_library(Bones
     src/Bones/Transform.h
     src/Bones/Camera.h
     src/Bones/Resource.h
+    src/Bones/Resources.h
     #src/Bones/Mesh.h
     #src/Bones/Texture.h
     #src/Bones/Shader.h
@@ -30,7 +33,8 @@ add_library(Bones
     src/Bones/MeshRenderer.cpp
     src/Bones/Transform.cpp
     src/Bones/Camera.cpp
-    src/Bones/Resource.cpp
+    src/Bones/Resources.cpp
+    src/Bones/Resources.cpp
     #src/Bones/Mesh.cpp
     #src/Bones/Texture.cpp
     #src/Bones/Shader.cpp
@@ -50,9 +54,14 @@ add_library(rend
   src/rend/Mesh.cpp
   src/rend/Util.cpp
 
-  src/rend/Mesh.h
-  src/rend/Shader.h
+  src/rend/Exception.h
+  src/rend/Context.h
   src/rend/Texture.h
+  src/rend/RenderTexture.h
+  src/rend/Shader.h
+  src/rend/Buffer.h
+  src/rend/Mesh.h
+  src/rend/Util.h
 )
 
 add_executable(game

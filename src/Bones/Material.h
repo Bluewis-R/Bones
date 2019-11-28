@@ -8,17 +8,18 @@
 
 #include "MaterialAttribute.h"
 
+using namespace rend;
 class Material
 {
 public:
-  std::shared_ptr<rend::Shader> GetShader();
-  void SetShader(std::shared_ptr<rend::Shader> _shader);
-  void SetValue(std::string name, std::weak_ptr<rend::Texture> value);
-  void SetValue(std::string name, float value);
+  std::shared_ptr<Shader> GetShader();
+  void SetShader(std::shared_ptr<Shader> _shader);
+  void SetValue(std::string _name, std::weak_ptr<Texture> _value);
+  void SetValue(std::string _name, float _value);
 
 
 private:
-  std::shared_ptr<rend::Shader> m_shader;
+  std::shared_ptr<Shader> m_shader;
   std::vector<MaterialAttribute> m_attributes;
 };
 

@@ -13,9 +13,9 @@ int main()
   std::shared_ptr<GameObject> triangle = core->AddGameObject();
   std::shared_ptr<MeshRenderer> mr = triangle->AddComponents<MeshRenderer>();
 
-  //std::shared_ptr<Mesh> mesh = core->load<Material>("shaders/simple");
+  std::shared_ptr<Mesh> mesh = core->GetResources()->Load<Mesh>("shaders/simple");
   
-
+  
   core->Start();
 
 

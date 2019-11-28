@@ -5,6 +5,7 @@
 #include <vector>
 #include "Enviroment.h"
 #include "GameObject.h"
+#include "Resources.h"
 
 class NonCopyable
 {
@@ -27,13 +28,14 @@ public:
   void Stop();
   void Update();  //  run() in labs...
 
-  void GetResources();
+  std::shared_ptr<Resources> GetResources();
 
 
 
 private:
   std::weak_ptr<Core> self;
   std::vector<std::shared_ptr<GameObject>> m_gameObjects;
+  std::shared_ptr<Resources> m_resources;
 
 
 

@@ -27,6 +27,10 @@ struct Face
   vec2 lmcc;
 };
 
+Mesh::Mesh(std::string _path)
+{
+}
+
 void Mesh::setBuffer(const std::string& name, const std::sr1::shared_ptr<Buffer>& buffer)
 {
   for(std::sr1::vector<std::sr1::shared_ptr<BufferData> >::iterator it =

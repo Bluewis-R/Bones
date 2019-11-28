@@ -3,6 +3,8 @@
 
 #include <string>
 
+#include "Bones/Resource.h"
+
 namespace rend
 {
 
@@ -23,8 +25,9 @@ struct TextureData
   std::sr1::shared_ptr<TextureAdapter> texture;
 };
 
-struct Mesh
+struct Mesh : public Resource
 {
+  Mesh(std::string _path);
   void setBuffer(const std::string& name, const std::sr1::shared_ptr<Buffer>& buffer);
   void setTexture(const std::string& name, const std::sr1::shared_ptr<TextureAdapter>& texture);
   void parse(const std::string& data);

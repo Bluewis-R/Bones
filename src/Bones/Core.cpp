@@ -51,3 +51,8 @@ void Core::Update()
     }
   }
 }
+
+std::shared_ptr<Resources> Core::GetResources()
+{
+  return m_resources;
+}
