@@ -1,3 +1,8 @@
+#pragma once
+#ifndef _CONTEXT_H_
+#define _CONTEXT_H_
+
+
 #include <sr1/memory>
 
 namespace rend
@@ -25,3 +30,5 @@ private:
 };
 
 }
+
+#endif // !_CONTEXT_H_

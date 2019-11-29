@@ -5,7 +5,6 @@
 //#include "OpenGL/triRenderer.h"
 #include "Bones/Macros.h"
 
-
 int main()
 {
 
@@ -14,7 +13,8 @@ int main()
   std::shared_ptr<MeshRenderer> mr = triangle->AddComponents<MeshRenderer>();
 
   std::shared_ptr<Mesh> mesh = core->GetResources()->Load<Mesh>("shaders/simple");
-  
+  mr->SetMesh(mesh);
+
   
   core->Start();
 

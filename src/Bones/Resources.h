@@ -3,12 +3,13 @@
 #define _RESOURCES_H_
 #include <list>
 #include "Bones/Resource.h"
+#include "rend/Context.h"
 
 
 class Resources
 {
 public:
-
+	
 
   template <typename T>
   std::shared_ptr<T> Load(std::string _path)
@@ -24,19 +25,25 @@ public:
       else
       {
         //  Creating the new resource, then return NEW path
-        //std::shared_ptr<T> rtn = Create(_path);
-        std::shared_ptr<T> rtn = std::make_shared<T>(_path);
+		    std::shared_ptr<Context> context = std::make_shared<Context>();
+		    std::shared_ptr<T> rtn = context->createMesh();
+		    rtn->load();
+
+
+		    rtn->SetPath(_path);
+
         return rtn;
       }
     }
-
+	
   }
 
 
   template <typename T>
   std::shared_ptr<T> Create(std::string _path)
   {
-    std::shared_ptr<T> rtn = std::make_shared<T>(_path);
+	  //std::shared_ptr<T> rtn = cont.createMesh();
+	  //rtn.con
     return rtn;
   }
 
@@ -46,6 +53,8 @@ public:
 
 private:
   std::list<std::shared_ptr<Resource>> m_resources;
+  //std::shared_ptr<Context> context;
+  
 
 
 };
