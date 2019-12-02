@@ -21,7 +21,7 @@ public:
   //virtual void onGui();
 
 
-  //std::shared_ptr<Core> getCore();
+  std::shared_ptr<Core> GetCore();
   std::shared_ptr<GameObject> GetGameObject();
   //std::shared_ptr<Keyboard> getKeyBoard();
   //std::shared_ptr<Enviroment> getEnviroment();
@@ -29,6 +29,8 @@ public:
 
 
 private:
+  friend class GameObject;
+
   std::weak_ptr<GameObject> m_gameObject;
 
 };

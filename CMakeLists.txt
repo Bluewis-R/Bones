@@ -32,7 +32,7 @@ add_library(Bones
     src/Bones/Transform.cpp
     src/Bones/Camera.cpp
     src/Bones/Resources.cpp
-    src/Bones/Resources.cpp
+    src/Bones/Resource.cpp
     src/Bones/BMesh.cpp
     src/Bones/Material.cpp
     src/Bones/MaterialAttribute.cpp
@@ -64,6 +64,11 @@ add_executable(game
     src/game/main.cpp 
 )
 
-target_link_libraries(rend glew32 opengl32)
+if(MSVC)
+  target_link_libraries(rend glew32 opengl32)
+else()
+  target_link_libraries(rend GLEW GL)
+endif()
+
 target_link_libraries(Bones SDL2 rend)
 target_link_libraries(game Bones)

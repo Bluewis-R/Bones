@@ -3,6 +3,8 @@
 
 #include <Bones/Bones.h>
 //#include "OpenGL/triRenderer.h"
+
+// TODO: Put into Bones.h
 #include "Bones/Macros.h"
 
 int main()
@@ -12,7 +14,7 @@ int main()
   std::shared_ptr<GameObject> triangle = core->AddGameObject();
   std::shared_ptr<MeshRenderer> mr = triangle->AddComponents<MeshRenderer>();
 
-  std::shared_ptr<Mesh> mesh = core->GetResources()->Load<Mesh>("model/curuthers");
+  std::shared_ptr<BMesh> mesh = core->GetResources()->Load<BMesh>("model/curuthers");
   mr->SetMesh(mesh);
 
   
@@ -26,9 +28,6 @@ int main()
   }
   */
 
-
-
-
-  std::cin.get();
+  //std::cin.get();
   return 0;
 }

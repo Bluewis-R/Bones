@@ -12,7 +12,6 @@ class GameObject
 {
   friend class Core;
 public:
-  //std::shared_ptr<Core> getCore();      // this error hurts me emotionaly
   void Tick();
   void Display();
   std::shared_ptr<Core> GetCore();
@@ -21,16 +20,21 @@ public:
   std::shared_ptr<T> AddComponents()
   {
     std::shared_ptr<T> rtn = std::make_shared<T>();
+    rtn->m_gameObject = self;
     m_components.push_back(rtn);
     rtn->OnInitialise();
     return rtn;
   }
+
   template <typename T, typename A>
   std::shared_ptr<T> AddComponents(A a)
   {
     std::shared_ptr<T> rtn = std::make_shared<T>();
+    rtn->m_gameObject = self;
     m_components.push_back(rtn);
-    rtn->OnInitialise(A a);    return rtn;
+    rtn->OnInitialise(a);
+
+    return rtn;
   }
 
 

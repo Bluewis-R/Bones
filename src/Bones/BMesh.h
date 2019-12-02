@@ -1,16 +1,20 @@
 #pragma once
 #ifndef _B_MESH_H_
 #define _B_MESH_H_
+#include "Resource.h"
+#include <rend/rend.h>
 #include <memory>
 #include <string>
-#include <rend/Mesh.h>
 
-class BMesh
+class MeshRenderer;
+
+class BMesh : public Resource
 {
 public:
-  std::shared_ptr<rend::Mesh> Onload(std::string _path);
+  void OnLoad(std::string _path);
 
 private:
+  friend class MeshRenderer;
   std::string m_path;
   std::shared_ptr<rend::Mesh> m_mesh;
 

@@ -3,9 +3,15 @@
 #define _CORE_H_
 
 #include <vector>
-#include "Enviroment.h"
-#include "GameObject.h"
-#include "Resources.h"
+
+#include <SDL2/SDL.h>
+#include <rend/rend.h>
+
+class MeshRenderer;
+class GameObject;
+class Resources;
+class Environment;
+class BMesh;
 
 class NonCopyable
 {
@@ -26,18 +32,18 @@ public:
 
   void Start();
   void Stop();
-  void Update();  //  run() in labs...
 
   std::shared_ptr<Resources> GetResources();
 
-
-
 private:
+  friend class MeshRenderer;
+  friend class BMesh;
+
   std::weak_ptr<Core> self;
   std::vector<std::shared_ptr<GameObject>> m_gameObjects;
   std::shared_ptr<Resources> m_resources;
-
-
+  SDL_Window* window;
+  std::shared_ptr<rend::Context> context;
 
 
   //std::shared_ptr<Keyboard> m_Keyboard;

@@ -7,7 +7,10 @@
 #include "GameObject.h"
 #include "Component.h"
 #include "MeshRenderer.h"
-#include "rend/Mesh.h"
+#include "Resources.h"
+#include "BMesh.h"
+
+//#include "rend/rend.h"
 
 
 

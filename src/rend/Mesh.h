@@ -29,6 +29,7 @@ struct TextureData
   std::sr1::shared_ptr<TextureAdapter> texture;
 };
 
+// TODO: Not intended to derive from resource
 struct Mesh : public Resource
 {
   //std::shared_ptr<Mesh> OnLoad(std::string _path);
