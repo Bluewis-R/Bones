@@ -17,7 +17,7 @@ void MeshRenderer::OnDisplay()
   std::cout << "Render::onDisplay" << std::endl;
 }
 
-void MeshRenderer::SetMesh(std::shared_ptr<Mesh> _mesh)
+void MeshRenderer::SetMesh(std::shared_ptr<rend::Mesh> _mesh)
 {
   m_mesh = _mesh;
 }

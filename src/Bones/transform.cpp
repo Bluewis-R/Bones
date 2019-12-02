@@ -1,6 +1,5 @@
-#include "transform.h"
+#include "Transform.h"
 //#include <glm/glm.hpp>
-
 
 void Transform::SetPosition(glm::vec3 _position)
 {

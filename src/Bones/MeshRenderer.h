@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _MESHRENDERER_H_
-#define _MESHRENDERER_H_
+#ifndef _MESH_RENDERER_H_
+#define _MESH_RENDERER_H_
 
 #include <SDL2/SDL.h>
 #include <iostream>
@@ -16,7 +16,7 @@ public:
   void OnInitialise();
   void OnDisplay();
   
-  void SetMesh(std::shared_ptr<Mesh> _mesh);
+  void SetMesh(std::shared_ptr<rend::Mesh> _mesh);
   std::shared_ptr<rend::Mesh> GetMesh();
   std::shared_ptr<Material> GetMaterial();
 

@@ -19,9 +19,7 @@ add_library(Bones
     src/Bones/Camera.h
     src/Bones/Resource.h
     src/Bones/Resources.h
-    #src/Bones/Mesh.h
-    #src/Bones/Texture.h
-    #src/Bones/Shader.h
+    src/Bones/BMesh.h
     src/Bones/Material.h
     src/Bones/MaterialAttribute.h
 
@@ -35,9 +33,7 @@ add_library(Bones
     src/Bones/Camera.cpp
     src/Bones/Resources.cpp
     src/Bones/Resources.cpp
-    #src/Bones/Mesh.cpp
-    #src/Bones/Texture.cpp
-    #src/Bones/Shader.cpp
+    src/Bones/BMesh.cpp
     src/Bones/Material.cpp
     src/Bones/MaterialAttribute.cpp
 

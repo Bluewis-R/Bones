@@ -7,6 +7,7 @@
 
 Core::Core()
 {
+  GetResources();
 }
 
 std::shared_ptr<Core> Core::Initialise()
@@ -54,5 +55,7 @@ void Core::Update()
 
 std::shared_ptr<Resources> Core::GetResources()
 {
-  return m_resources;
+  std::shared_ptr<Resources> rtn = std::make_shared<Resources>();
+  m_resources = rtn;
+  return rtn;
 }

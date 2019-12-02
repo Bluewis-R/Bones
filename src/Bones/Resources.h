@@ -9,33 +9,38 @@
 class Resources
 {
 public:
-	
-
   template <typename T>
   std::shared_ptr<T> Load(std::string _path)
   {
-    for (std::list<std::shared_ptr<Resource>>::iterator it = m_resources.begin();
-      it != m_resources.end(); it++)
+    //std::shared_ptr<Resource> r = std::make_shared<Resource>();
+    //m_resources->push_back(r);
+
+
+    if (!m_resources->empty())
     {
-      if ((*it)->GetPath() == _path)
+
+      std::list<std::shared_ptr<Resource>>::iterator it = m_resources->begin();
+      //it != m_resources->end();
+      //it++
+
+
+      for (std::list<std::shared_ptr<Resource>>::iterator it = m_resources->begin();
+        it != m_resources->end(); it++)
       {
-        //  If there is an existing path, return path
-        return std::static_pointer_cast<T>((*it));
-      }
-      else
-      {
-        //  Creating the new resource, then return NEW path
-		    std::shared_ptr<Context> context = std::make_shared<Context>();
-		    std::shared_ptr<T> rtn = context->createMesh();
-		    rtn->load();
-
-
-		    rtn->SetPath(_path);
-
-        return rtn;
+        if ((*it)->GetPath() == _path)
+        {
+          //  If there is an existing path, return path
+          return std::static_pointer_cast<T>(*it);
+        }
       }
     }
-	
+    else
+    {
+      //  Creating the new resource, then return NEW path
+      std::shared_ptr<T> rtn = std::make_shared<T>();
+      //rtn->OnLoad(_path);
+      return rtn;
+    }
   }
 
 
@@ -50,9 +55,10 @@ public:
 
 
 
+  Resources();
 
 private:
-  std::list<std::shared_ptr<Resource>> m_resources;
+  std::shared_ptr<std::list<std::shared_ptr<Resource>>> m_resources;
   //std::shared_ptr<Context> context;
   
 

@@ -27,12 +27,7 @@ struct Face
   vec2 lmcc;
 };
 
-std::shared_ptr<Mesh> OnLoad(std::string _path)
-{
 
-
-
-}
 
 void Mesh::setBuffer(const std::string& name, const std::sr1::shared_ptr<Buffer>& buffer)
 {
