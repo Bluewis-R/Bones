@@ -6,7 +6,7 @@ include_directories(src)
 add_library(Bones
     src/Bones/Bones.h
     src/Bones/Macros.h
-	src/Bones/stb_vorbis.c
+	src/Bones/stb_vorbis.h
 
 
     src/Bones/Component.h
